@@ -1,3 +1,7 @@
+Did the getting started tutorial + better authentification:
+-User can delete\edit only his posts
+-only authorized user can make new posts
+
 # README
 
 This README would normally document whatever steps are necessary to get the
