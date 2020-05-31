@@ -1,0 +1,27 @@
+
+<div class="lefter">
+    <%= link_to 'Edit', edit_article_path(@article) %> |
+    <%= link_to 'Back', articles_path %>
+</div>
+
+<div class="text-center">
+    <p>
+    <strong>Title:</strong> <br>
+    <%= @article.title %>
+    </p>
+    <p class="border border-light rounded">
+    <strong>Text:</strong> <br>
+    <%= @article.text %>
+    </p>
+</div>
+
+<div class="lefter">
+    <h2>Comments</h2>
+</div>
+<%= render @article.comments %>
+
+<br>
+<div class="lefter">
+    <h2>Add a comment:</h2>
+</div>
+<%= render 'comments/form' %>

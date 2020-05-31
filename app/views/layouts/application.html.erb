@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsBlog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= favicon_link_tag 'ruby.ico'%>
+  </head>
+
+  <body>
+    <%= render "layouts/navbar" %>  
+
+    <%= yield %>
+
+    <%= render "layouts/footer" %>  
+  </body>
+</html>
