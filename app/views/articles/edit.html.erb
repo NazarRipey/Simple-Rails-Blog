@@ -5,4 +5,8 @@
     <%= link_to 'Back', articles_path %>
 </div>
 
-<%= render 'form' %>
+<% if current_user.nickname == @article.author %>
+    <%= render 'form' %>
+<% else %>
+    <h1>You cannot edit another author's article!!! </h1>
+<% end %>

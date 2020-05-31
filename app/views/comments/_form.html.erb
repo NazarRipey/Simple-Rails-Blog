@@ -1,9 +1,10 @@
 <div class="center">
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
-    <p>
-      <%= form.label :author  %><br>
-      <%= form.text_field :author, :size => 50 %>
-    </p>
+
+  <% if current_user %>
+    <%= form.hidden_field :author, value: current_user.nickname%>
+  <% end %>
+  
     <p>
       <%= form.label :text %><br>
       <%= form.text_area :text, :cols => "52", :rows => "3" %>

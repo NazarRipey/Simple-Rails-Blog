@@ -9,6 +9,17 @@
             </li>
         </ul>
         
+        <ul class="navbar-nav ml-auto">
+        <li>
+            <% if current_user %>
+                Logged in as <%= current_user.nickname %>.
+                <%= link_to "Log Out", logout_path %>
+            <% else %>
+                <%= link_to "Sign Up", signup_path %> or 
+                <%= link_to "Log In", login_path %>
+            <% end %>
+        </li>
+        </ul>
         
     </div>
 </nav>

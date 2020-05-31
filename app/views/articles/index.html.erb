@@ -5,8 +5,13 @@
 <%= link_to 'New article', new_article_path %>
 </div>
 
+<div class="center">
+  <p id="alert"><%= alert %></p>
+</div>
+
 <table class="table table-light">
   <tr class="thead-dark">
+    <th>Author</th>
     <th>Title</th>
     <th>Text</th>
     <th colspan="4"></th>
@@ -14,6 +19,7 @@
  
   <% @articles.each do |article| %>
     <tr>
+      <td><%= article.author %></td>
       <td><%= article.title %></td>
       <td><%= article.text %></td>
       <td><%= link_to 'Show', article_path(article) %></td>

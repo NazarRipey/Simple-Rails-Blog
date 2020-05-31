@@ -15,9 +15,13 @@
       </div>
     <% end %>
 
+    <% if current_user %>
+    <%= form.hidden_field :author, value: current_user.nickname%>
+  <% end %>
+
     <p>
       <%= form.label :title %><br>
-      <%= form.text_field :title, :size => 50  %>
+      <%= form.text_field :title, :size => 50 %>
     </p>
 
     <p>
